@@ -12,7 +12,6 @@ public class ErrorTestServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         // Return a 500 Internal Server Error
-        resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
-                       "Intentional failure to trigger 500");
+        resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,"Intentional failure to trigger 500");
     }
 }

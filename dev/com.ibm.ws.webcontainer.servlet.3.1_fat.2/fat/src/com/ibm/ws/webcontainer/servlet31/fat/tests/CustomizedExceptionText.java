@@ -177,7 +177,7 @@ public class CustomizedExceptionText {
     @Test
     public void tes403CustomMessage() throws Throwable {
         server.stopServer();
-        server.setServerConfigurationFile("customizedExceptionTest/server-test-SRVE0218E-custom-message.xml");
+        server.setServerConfigurationFile("customizedExceptionTest/server-test-403-custom-message.xml");
         server.startServer();
         server.waitForStringInLogUsingMark("CWWKT0016I.*" + CUSTOM_ERROR_APP_NAME + ".*");
 
@@ -190,13 +190,13 @@ public class CustomizedExceptionText {
     /**
      * Verify that the customized exception text configured in server.xml
      * is returned instead of the default
-     * "SRVE0232E: An exception occurred" message
+     * "SRVE0133E: An exception occurred" message
      * when a servlet triggers a 500 Internal Server Error.
      */
     @Test
-    public void test500CustomMessage() throws Throwable {
+    public void testCustom500Message() throws Throwable {
         server.stopServer();
-        server.setServerConfigurationFile("customizedExceptionTest/server-test-SRVE0232E-custom-message.xml");
+        server.setServerConfigurationFile("customizedExceptionTest/server-test-500-custom-message.xml");
         server.startServer();
         server.waitForStringInLogUsingMark("CWWKT0016I.*" + CUSTOM_ERROR_APP_NAME + ".*");
 
